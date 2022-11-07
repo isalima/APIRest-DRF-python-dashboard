@@ -1,0 +1,45 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+
+           <div class="container-fluid px-4">
+             <h1 class="mt-4">Equipe</h1>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                {{pessoadetail.nome_pessoa}}
+                            </div>
+
+                            <div class="card-body">
+                               <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Cargo</th>
+                                            <th>CPF</th>
+                                            <th>Email</th>
+                                         </tr>
+                                    </thead>
+                                    <tbody>
+                                         <tr>
+                                            <td>{{pessoadetail.nome_pessoa}}</td>
+                                            <td>{{pessoadetail.cargo}}</td>
+                                            <td>{{pessoadetail.cpf}}</td>
+                                            <td>{{pessoadetail.email}}</td>
+                                         </tr>
+                                     </tbody>
+                                </table>
+
+                                 {% buttons %}
+                                     <td><button type="submit" class="btn btn-primary">Editar</button></td>
+                                     <td><button type="submit" class="btn btn-primary">Excluir</button></td>
+                                 {% endbuttons %}
+                            </div>
+
+                        </div>
+                    </div>
+
+
+{% endblock %}
